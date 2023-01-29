@@ -1,1 +1,1 @@
-Demo :https://portfolio-vaibhavr02.vercel.app
+Demo :vaibhav-randale-portfolio.netlify.app
