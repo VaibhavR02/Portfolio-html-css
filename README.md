@@ -1,1 +1,1 @@
-Demo :vaibhav-randale-portfolio.netlify.app
+Demo : vaibhav-randale-portfolio.netlify.app
