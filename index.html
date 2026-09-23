@@ -1,10 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vaibhav Randale</title>
+    <meta name="theme-color" content="#f6efe3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/c2a700d4ef.js"
@@ -26,13 +33,14 @@
             "
             target="_blank"
           >
-            <h1 style="color: #ff004f" class="name" href="#header">
+            <h1 style="color: var(--accent)" class="name" href="#header">
               < <i> Vaibhav </i>/>
             </h1></a
           >
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills-showcase">Skills</a></li>
             <li><a href="#services">Interest</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -42,17 +50,14 @@
           <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="hero">
-          <div class="header-text">
-            <h1>
-              Hi<span class="wave">👋</span>, I'm <span>Vaibhav</span>
-              <br />From Mumbai
-            </h1>
-          </div>
+          <h1 class="sr-only">Vaibhav Randale, Full Stack Developer</h1>
           <div class="meImgae">
-            <img src="images/me-color.png" alt="" />
-          </div>
-          <div class="mobileImage">
-            <div class="img"></div>
+            <img
+              src="images/aboutmehero.png"
+              alt="Vaibhav Randale at his desk with a laptop, dashboards and a skills board behind him"
+              width="1672"
+              height="941"
+            />
           </div>
         </div>
       </div>
@@ -62,16 +67,69 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="images/me.jpg" alt="" />
+            <img
+              src="images/vaibhavrandalewbg.png"
+              alt="Vaibhav Randale"
+              loading="lazy"
+            />
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
-            <p>
-              To succeed in an environment of growth and excellence and earn a
-              position that provides me job satisfaction and self-development to
-              achieve personal as well as organizational goals. I can utilize my
-              skills and knowledge efficiently for organizational growth.
+            <p class="about-lead">
+              I'm <strong>Vaibhav</strong>, a Full Stack Developer who thinks in
+              systems. My skill set covers the whole stack: React on the front,
+              Node.js and Express on the back, MongoDB, MySQL and Redis for
+              data, and queue-driven, real-time design that keeps software fast
+              and reliable.
             </p>
+            <p class="about-sub">
+              My mindset is simple: take ownership, keep the code clean and
+              never stop learning. I break big problems into small, solvable
+              pieces, pick up new technologies quickly, and use AI tools like
+              Claude Code and Cursor to move faster without cutting corners.
+            </p>
+
+            <div class="about-focus">
+              <div class="focus-group">
+                <span class="focus-label">Skill set</span>
+                <div class="tech-list">
+                  <span class="tech"
+                    ><i class="fa-solid fa-layer-group"></i>Full-Stack MERN</span
+                  >
+                  <span class="tech"
+                    ><i class="fa-solid fa-diagram-project"></i>System Design</span
+                  >
+                  <span class="tech"
+                    ><i class="fa-solid fa-bolt"></i>Real-Time &amp;
+                    Event-Driven</span
+                  >
+                  <span class="tech"
+                    ><i class="fa-solid fa-robot"></i>AI-Assisted
+                    Development</span
+                  >
+                </div>
+              </div>
+              <div class="focus-group">
+                <span class="focus-label">Mindset</span>
+                <div class="tech-list">
+                  <span class="tech"
+                    ><i class="fa-solid fa-puzzle-piece"></i>Problem Solver</span
+                  >
+                  <span class="tech"
+                    ><i class="fa-solid fa-flag-checkered"></i>Ownership</span
+                  >
+                  <span class="tech"
+                    ><i class="fa-solid fa-seedling"></i>Fast Learner</span
+                  >
+                  <span class="tech"
+                    ><i class="fa-solid fa-broom"></i>Clean Code</span
+                  >
+                  <span class="tech"
+                    ><i class="fa-solid fa-arrow-trend-up"></i>Growth-Minded</span
+                  >
+                </div>
+              </div>
+            </div>
 
             <div class="tab-titles">
               <p class="tab-links active-link" onclick="opentab('skills')">
@@ -85,28 +143,802 @@
 
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>Web-development</span><br />Web app development</li>
                 <li>
-                  <span>Languages</span><br />ReactJS | NodeJS | ExpressJS |
-                  HTML | CSS | JS | MongoDB | Java | MySQL
+                  <span>Full Stack</span><br />MERN stack &middot; Scalable
+                  backend systems &middot; Real-time applications
+                </li>
+                <li>
+                  <span>Core Stack</span><br />JavaScript (ES6+) | React.js |
+                  Node.js | Express.js | MongoDB | MySQL | Redis
+                </li>
+                <li>
+                  <span>Backend Engineering</span><br />BullMQ | Socket.IO |
+                  MQTT | JWT &amp; RBAC | AWS (EC2)
+                </li>
+                <li>
+                  <a href="#skills-showcase" class="skills-link"
+                    >See my full tech stack &rarr;</a
+                  >
                 </li>
               </ul>
             </div>
 
             <div class="tab-contents" id="experience">
-              <ul>
+              <ul class="timeline">
                 <li>
-                  <span>Full Stack Developer</span><br />Taypro Private Limited
-                  [March 2023*]
+                  <span class="tl-title">Full Stack Developer</span>
+                  <span class="tl-meta"
+                    >Taypro Pvt. Ltd., Pune &middot; March 2023 &ndash;
+                    Present</span
+                  >
+                  <ul class="tl-points">
+                    <li>
+                      Architected a multi-tenant, subscription-based B2B SaaS
+                      platform serving 10+ enterprise clients with zero
+                      downtime.
+                    </li>
+                    <li>
+                      Cut API response time by 40% with Redis caching and
+                      MongoDB query optimisation.
+                    </li>
+                    <li>
+                      Built a BullMQ job system that removed 10+ hours of manual
+                      work every week.
+                    </li>
+                    <li>
+                      Delivered real-time Socket.IO dashboards, WhatsApp alerts,
+                      an OpenAI tool-calling layer and ERP finance workflows.
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
 
             <div class="tab-contents" id="education">
-              <ul>
-                <li><span>2022</span><br />B.E. at PCCOE Pune.</li>
-                <li><span>2019</span><br />Diploma at PLGP Latur.</li>
+              <ul class="timeline">
+                <li>
+                  <span class="tl-title"
+                    >BE in Electronics &amp; Telecommunication</span
+                  >
+                  <span class="tl-meta"
+                    >PCCOE, Pune &middot; Aug 2019 &ndash; June 2022</span
+                  >
+                  <span class="tl-badge">CGPA 9.37</span>
+                </li>
+                <li>
+                  <span class="tl-title">Diploma in Electronics</span>
+                  <span class="tl-meta"
+                    >PLGP, Latur &middot; July 2016 &ndash; May 2019</span
+                  >
+                  <span class="tl-badge">88.06%</span>
+                </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------skills------------------------ -->
+    <div id="skills-showcase">
+      <div class="container">
+        <h1 class="sub-title">My Tech Stack</h1>
+        <p class="skills-intro">
+          Full Stack Developer with 3.5 years of experience building
+          enterprise-grade MERN applications, scalable backends and real-time,
+          event-driven systems.
+        </p>
+
+        <!-- Architecture illustration -->
+        <div class="arch-wrap">
+          <svg
+            class="arch"
+            viewBox="0 0 960 350"
+            role="img"
+            aria-label="Architecture: React UI talks to an Express API secured with JWT, RBAC and rate limiting; the API uses Redis caching, BullMQ queues and workers, and MongoDB or MySQL databases; IoT devices publish over MQTT and LoRaWAN."
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <marker
+                id="arrow"
+                viewBox="0 0 10 10"
+                refX="9"
+                refY="5"
+                markerWidth="7"
+                markerHeight="7"
+                orient="auto-start-reverse"
+              >
+                <path d="M0 0 L10 5 L0 10 z" fill="#ff004f" />
+              </marker>
+              <linearGradient id="nodeGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2d2d2d" />
+                <stop offset="1" stop-color="#232323" />
+              </linearGradient>
+            </defs>
+
+            <!-- connections -->
+            <g
+              class="arch-lines"
+              fill="none"
+              stroke="#ff004f"
+              stroke-width="2"
+              marker-end="url(#arrow)"
+            >
+              <path id="f1" d="M180 160 H270" />
+              <path id="f2" d="M270 190 H180" />
+              <path id="f3" d="M180 290 H320 V214" />
+              <path id="f4" d="M440 150 C495 150 495 50 550 50" />
+              <path id="f5" d="M440 190 C495 190 495 290 550 290" />
+              <path id="f6" d="M720 50 H780" />
+              <path id="f7" d="M720 290 H780" />
+              <path id="f8" d="M865 250 V94" />
+            </g>
+
+            <!-- data flowing along the connections -->
+            <g class="arch-flow" fill="none" stroke="#ff004f" stroke-width="2">
+              <use href="#f1" />
+              <use href="#f2" />
+              <use href="#f3" />
+              <use href="#f4" />
+              <use href="#f5" />
+              <use href="#f6" />
+              <use href="#f7" />
+              <use href="#f8" />
+            </g>
+            <g class="arch-dots" fill="#fff">
+              <circle r="4">
+                <animateMotion dur="2.4s" begin="0s" repeatCount="indefinite">
+                  <mpath href="#f1" />
+                </animateMotion>
+              </circle>
+              <circle r="4">
+                <animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite">
+                  <mpath href="#f2" />
+                </animateMotion>
+              </circle>
+              <circle r="4">
+                <animateMotion dur="3s" begin="0.4s" repeatCount="indefinite">
+                  <mpath href="#f3" />
+                </animateMotion>
+              </circle>
+              <circle r="4">
+                <animateMotion dur="2.4s" begin="0.6s" repeatCount="indefinite">
+                  <mpath href="#f4" />
+                </animateMotion>
+              </circle>
+              <circle r="4">
+                <animateMotion dur="2.4s" begin="1.4s" repeatCount="indefinite">
+                  <mpath href="#f5" />
+                </animateMotion>
+              </circle>
+              <circle r="4">
+                <animateMotion dur="1.6s" begin="1.8s" repeatCount="indefinite">
+                  <mpath href="#f6" />
+                </animateMotion>
+              </circle>
+              <circle r="4">
+                <animateMotion dur="1.6s" begin="2.6s" repeatCount="indefinite">
+                  <mpath href="#f7" />
+                </animateMotion>
+              </circle>
+              <circle r="4">
+                <animateMotion dur="1.8s" begin="3.4s" repeatCount="indefinite">
+                  <mpath href="#f8" />
+                </animateMotion>
+              </circle>
+            </g>
+            <g font-size="11" fill="#ababab" text-anchor="middle">
+              <text x="225" y="152">REST</text>
+              <text x="225" y="208">Socket.IO</text>
+              <text x="250" y="282">MQTT</text>
+            </g>
+
+            <!-- nodes -->
+            <g font-family="system-ui, sans-serif">
+              <!-- React -->
+              <g transform="translate(10 120)">
+                <rect
+                  width="170"
+                  height="80"
+                  rx="12"
+                  fill="url(#nodeGrad)"
+                  stroke="#3a3a3a"
+                />
+                <image
+                  href="images/skills/react.svg"
+                  x="16"
+                  y="27"
+                  width="26"
+                  height="26"
+                />
+                <text
+                  x="56"
+                  y="38"
+                  font-size="13"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  React UI
+                </text>
+                <text x="56" y="56" font-size="10.5" fill="#ababab">
+                  Admin dashboards
+                </text>
+              </g>
+              <!-- IoT -->
+              <g transform="translate(10 250)">
+                <rect
+                  width="170"
+                  height="80"
+                  rx="12"
+                  fill="url(#nodeGrad)"
+                  stroke="#3a3a3a"
+                />
+                <rect
+                  x="12"
+                  y="23"
+                  width="34"
+                  height="34"
+                  rx="8"
+                  fill="#ff004f"
+                  fill-opacity=".15"
+                />
+                <g
+                  transform="translate(29 40)"
+                  fill="none"
+                  stroke="#ff004f"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <circle r="2.5" fill="#ff004f" stroke="none" />
+                  <path d="M-6 -6 A9 9 0 0 0 -6 6" />
+                  <path d="M6 -6 A9 9 0 0 1 6 6" />
+                  <path d="M-10 -10 A14 14 0 0 0 -10 10" />
+                  <path d="M10 -10 A14 14 0 0 1 10 10" />
+                </g>
+                <text
+                  x="56"
+                  y="38"
+                  font-size="13"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  IoT Devices
+                </text>
+                <text x="56" y="56" font-size="10.5" fill="#ababab">
+                  MQTT · LoRaWAN
+                </text>
+              </g>
+              <!-- Express API -->
+              <g transform="translate(270 120)">
+                <rect
+                  class="pulse"
+                  width="170"
+                  height="80"
+                  rx="12"
+                  fill="url(#nodeGrad)"
+                  stroke="#ff004f"
+                  stroke-width="1.5"
+                />
+                <image
+                  href="images/skills/nodejs.svg"
+                  x="16"
+                  y="27"
+                  width="26"
+                  height="26"
+                />
+                <text
+                  x="56"
+                  y="38"
+                  font-size="13"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  Express API
+                </text>
+                <text x="56" y="56" font-size="10.5" fill="#ababab">
+                  JWT · RBAC · Rate limit
+                </text>
+              </g>
+              <!-- Redis -->
+              <g transform="translate(550 10)">
+                <rect
+                  width="170"
+                  height="80"
+                  rx="12"
+                  fill="url(#nodeGrad)"
+                  stroke="#3a3a3a"
+                />
+                <image
+                  href="images/skills/redis.svg"
+                  x="16"
+                  y="27"
+                  width="26"
+                  height="26"
+                />
+                <text
+                  x="56"
+                  y="38"
+                  font-size="13"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  Redis Cache
+                </text>
+                <text x="56" y="56" font-size="10.5" fill="#ababab">
+                  Fast, cached reads
+                </text>
+              </g>
+              <!-- BullMQ -->
+              <g transform="translate(550 250)">
+                <rect
+                  width="170"
+                  height="80"
+                  rx="12"
+                  fill="url(#nodeGrad)"
+                  stroke="#3a3a3a"
+                />
+                <rect
+                  x="12"
+                  y="23"
+                  width="34"
+                  height="34"
+                  rx="8"
+                  fill="#ff004f"
+                  fill-opacity=".15"
+                />
+                <g fill="#ff004f">
+                  <rect x="20" y="31" width="18" height="4" rx="2" />
+                  <rect
+                    x="20"
+                    y="38"
+                    width="18"
+                    height="4"
+                    rx="2"
+                    opacity=".75"
+                  />
+                  <rect
+                    x="20"
+                    y="45"
+                    width="18"
+                    height="4"
+                    rx="2"
+                    opacity=".5"
+                  />
+                </g>
+                <text
+                  x="56"
+                  y="38"
+                  font-size="13"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  BullMQ Queue
+                </text>
+                <text x="56" y="56" font-size="10.5" fill="#ababab">
+                  Message queues
+                </text>
+              </g>
+              <!-- Databases -->
+              <g transform="translate(780 10)">
+                <rect
+                  width="170"
+                  height="80"
+                  rx="12"
+                  fill="url(#nodeGrad)"
+                  stroke="#3a3a3a"
+                />
+                <image
+                  href="images/skills/mongodb.svg"
+                  x="16"
+                  y="27"
+                  width="26"
+                  height="26"
+                />
+                <text
+                  x="56"
+                  y="38"
+                  font-size="13"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  Databases
+                </text>
+                <text x="56" y="56" font-size="10.5" fill="#ababab">
+                  MongoDB · MySQL
+                </text>
+              </g>
+              <!-- Workers -->
+              <g transform="translate(780 250)">
+                <rect
+                  width="170"
+                  height="80"
+                  rx="12"
+                  fill="url(#nodeGrad)"
+                  stroke="#3a3a3a"
+                />
+                <rect
+                  x="12"
+                  y="23"
+                  width="34"
+                  height="34"
+                  rx="8"
+                  fill="#ff004f"
+                  fill-opacity=".15"
+                />
+                <g transform="translate(29 40)" fill="none" stroke="#ff004f">
+                  <circle r="8" stroke-width="4" stroke-dasharray="3.1 3.1" />
+                  <circle r="5.5" stroke-width="2" />
+                </g>
+                <text
+                  x="56"
+                  y="38"
+                  font-size="13"
+                  font-weight="600"
+                  fill="#fff"
+                >
+                  Workers
+                </text>
+                <text x="56" y="56" font-size="10.5" fill="#ababab">
+                  Background jobs
+                </text>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="skill-group">
+            <h3><i class="fa-solid fa-code"></i> Languages</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/javascript.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >JavaScript (ES6+)
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-database"></i></span
+                >SQL
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-group">
+            <h3><i class="fa-solid fa-display"></i> Frontend</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >React.js
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/html5.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >HTML5
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/css3.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >CSS3
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-group wide">
+            <h3><i class="fa-solid fa-server"></i> Backend</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/nodejs.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Node.js
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/express.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Express.js
+              </div>
+              <div class="skill">
+                <span class="ico glyph"><i class="fa-solid fa-plug"></i></span
+                >REST APIs
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/jsonwebtokens.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >JWT Auth
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-user-shield"></i></span
+                >RBAC
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-layer-group"></i></span
+                >Middleware
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-gauge-high"></i></span
+                >Rate Limiting
+              </div>
+              <div class="skill">
+                <span class="ico glyph"><i class="fa-solid fa-clock"></i></span
+                >Cron Jobs
+              </div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-group">
+            <h3><i class="fa-solid fa-database"></i> Databases</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/mongodb.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >MongoDB
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/mysql.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >MySQL
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/redis.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Redis (Caching)
+              </div>
+            </div>
+          </div>
+
+          <!-- Queues & Workers -->
+          <div class="skill-group">
+            <h3><i class="fa-solid fa-list-check"></i> Queues &amp; Workers</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-list-check"></i></span
+                >BullMQ
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-envelopes-bulk"></i></span
+                >Message Queues
+              </div>
+              <div class="skill">
+                <span class="ico glyph"><i class="fa-solid fa-gears"></i></span
+                >Background Workers
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-arrows-rotate"></i></span
+                >Subscriptions
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-time -->
+          <div class="skill-group">
+            <h3><i class="fa-solid fa-bolt"></i> Real-Time &amp; Protocols</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/socketio.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Socket.IO
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/mqtt.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >MQTT
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-tower-broadcast"></i></span
+                >LoRaWAN
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud -->
+          <div class="skill-group">
+            <h3><i class="fa-solid fa-cloud"></i> Cloud &amp; Deployment</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/aws.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >AWS (EC2)
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/vercel.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Vercel
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/render.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Render
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/cloudinary.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Cloudinary
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-group">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Tools</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/claude.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Claude Code
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/cursor.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Cursor
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/git.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Git
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/postman.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Postman
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/httpie.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >HTTPie
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/vscode.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >VS Code
+              </div>
+            </div>
+          </div>
+
+          <!-- Integrations -->
+          <div class="skill-group wide">
+            <h3><i class="fa-solid fa-puzzle-piece"></i> Integrations</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/whatsapp.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >WhatsApp Business API
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/openai.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >OpenAI
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-satellite-dish"></i></span
+                >ChirpStack
+              </div>
+              <div class="skill">
+                <span class="ico"
+                  ><img
+                    src="images/skills/cloudinary.svg"
+                    alt=""
+                    loading="lazy" /></span
+                >Cloudinary
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-envelope"></i></span
+                >NodeMailer
+              </div>
+            </div>
+          </div>
+
+          <!-- Concepts -->
+          <div class="skill-group wide">
+            <h3><i class="fa-solid fa-lightbulb"></i> Concepts</h3>
+            <div class="skill-list">
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-diagram-project"></i></span
+                >System Design
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-network-wired"></i></span
+                >Distributed Systems
+              </div>
+              <div class="skill">
+                <span class="ico glyph"><i class="fa-solid fa-bolt"></i></span
+                >Event-Driven Architecture
+              </div>
+              <div class="skill">
+                <span class="ico glyph"
+                  ><i class="fa-solid fa-building-columns"></i></span
+                >ERP Integration
+              </div>
+              <div class="skill">
+                <span class="ico glyph"><i class="fa-solid fa-robot"></i></span
+                >AI Agents
+              </div>
             </div>
           </div>
         </div>
@@ -117,26 +949,213 @@
     <div id="services">
       <div class="container">
         <h1 class="sub-title">My Interests</h1>
+        <p class="interest-intro">
+          The kind of problems I enjoy solving: scalable backends, real-time
+          systems and anything that makes software smarter and faster.
+        </p>
         <div class="services-list">
-          <div>
-            <i class="fa-solid fa-laptop-code"></i>
-            <h2>Frontend Design</h2>
+          <article class="interest">
+            <span class="interest-num">01</span>
+            <div class="interest-icon"><i class="fa-solid fa-server"></i></div>
+            <h2>Scalable Backend Systems</h2>
             <p>
-              I am able to create basic Frontend design using ReactJs ,Js, Html
-              , CSS , Bootstrap and Js
+              Designing fast, secure REST APIs with Redis caching, query
+              optimisation, rate limiting, JWT auth and granular RBAC.
             </p>
-            <a href="#">Learn more</a>
-          </div>
-
-          <div>
-            <i class="fa-solid fa-layer-group"></i>
-            <h2>Backend Design</h2>
+            <div class="tech-list">
+              <span class="tech"
+                ><img
+                  src="images/skills/nodejs.svg"
+                  alt=""
+                  loading="lazy"
+                />Node.js</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/express.svg"
+                  alt=""
+                  loading="lazy"
+                />Express</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/mongodb.svg"
+                  alt=""
+                  loading="lazy"
+                />MongoDB</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/mysql.svg"
+                  alt=""
+                  loading="lazy"
+                />MySQL</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/redis.svg"
+                  alt=""
+                  loading="lazy"
+                />Redis</span
+              >
+              <span class="tech">BullMQ</span>
+            </div>
+          </article>
+          <article class="interest">
+            <span class="interest-num">02</span>
+            <div class="interest-icon"><i class="fa-solid fa-cubes"></i></div>
+            <h2>SaaS & Subscriptions</h2>
             <p>
-              I am able to create basic REST ful api's using nodeJS,ExpressJS,
-              MySQL and mongoDB
+              Multi-tenant, subscription-based platforms with plan-based feature
+              gating, billing workflows and automated expiry handling.
             </p>
-            <a href="#">Learn more</a>
-          </div>
+            <div class="tech-list">
+              <span class="tech"
+                ><img
+                  src="images/skills/jsonwebtokens.svg"
+                  alt=""
+                  loading="lazy"
+                />JWT</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/whatsapp.svg"
+                  alt=""
+                  loading="lazy"
+                />WhatsApp</span
+              >
+              <span class="tech">Multi-Tenant</span>
+              <span class="tech">RBAC</span>
+            </div>
+          </article>
+          <article class="interest">
+            <span class="interest-num">03</span>
+            <div class="interest-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h2>Real-Time Applications</h2>
+            <p>
+              Event-driven pipelines that push sub-second updates to live
+              dashboards from high-frequency data streams.
+            </p>
+            <div class="tech-list">
+              <span class="tech"
+                ><img
+                  src="images/skills/socketio.svg"
+                  alt=""
+                  loading="lazy"
+                />Socket.IO</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/redis.svg"
+                  alt=""
+                  loading="lazy"
+                />Redis</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/nodejs.svg"
+                  alt=""
+                  loading="lazy"
+                />Node.js</span
+              >
+            </div>
+          </article>
+          <article class="interest">
+            <span class="interest-num">04</span>
+            <div class="interest-icon">
+              <i class="fa-solid fa-tower-broadcast"></i>
+            </div>
+            <h2>IoT & Protocols</h2>
+            <p>
+              Ingesting device data over MQTT and LoRaWAN and sending commands
+              back with sub-second latency.
+            </p>
+            <div class="tech-list">
+              <span class="tech"
+                ><img
+                  src="images/skills/mqtt.svg"
+                  alt=""
+                  loading="lazy"
+                />MQTT</span
+              >
+              <span class="tech">LoRaWAN</span>
+              <span class="tech">ChirpStack</span>
+            </div>
+          </article>
+          <article class="interest">
+            <span class="interest-num">05</span>
+            <div class="interest-icon"><i class="fa-solid fa-robot"></i></div>
+            <h2>AI Agents & Automation</h2>
+            <p>
+              LLM-powered actions that turn natural language into system
+              operations using OpenAI tool-calling, plus AI-assisted
+              development.
+            </p>
+            <div class="tech-list">
+              <span class="tech"
+                ><img
+                  src="images/skills/openai.svg"
+                  alt=""
+                  loading="lazy"
+                />OpenAI</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/claude.svg"
+                  alt=""
+                  loading="lazy"
+                />Claude Code</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/cursor.svg"
+                  alt=""
+                  loading="lazy"
+                />Cursor</span
+              >
+            </div>
+          </article>
+          <article class="interest">
+            <span class="interest-num">06</span>
+            <div class="interest-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h2>Frontend Dashboards</h2>
+            <p>
+              Responsive React.js admin dashboards and client-facing portals
+              that consume live data.
+            </p>
+            <div class="tech-list">
+              <span class="tech"
+                ><img
+                  src="images/skills/react.svg"
+                  alt=""
+                  loading="lazy"
+                />React</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/javascript.svg"
+                  alt=""
+                  loading="lazy"
+                />JavaScript</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/html5.svg"
+                  alt=""
+                  loading="lazy"
+                />HTML</span
+              >
+              <span class="tech"
+                ><img
+                  src="images/skills/css3.svg"
+                  alt=""
+                  loading="lazy"
+                />CSS</span
+              >
+            </div>
+          </article>
         </div>
       </div>
     </div>
@@ -144,108 +1163,437 @@
     <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Top Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1604605801370-3396f9bd9cf0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            />
-            <div class="layer">
-              <h3>MERN-STACK E-COMMERSE WEBSITE</h3>
-              <p>
-                Amazon Clone
-                <br />
-                Tools : REACTJS | NODEJS | EXPRESS| MONGODB | HTML | CSS |
-                REACT-BOTSTRAP
-              </p>
-              <a href="https://amazonnew.onrender.com" target="_blank"
-                ><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
+        <p class="work-intro">
+          A selection of what I have built, from full-stack MERN applications to
+          polished frontend projects.
+        </p>
 
-          <div class="work">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1675055730251-9f3990f1f9d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGNyeXB0b3xlbnwwfHwwfHx8MA%3D%3D"
-            />
-            <div class="layer">
-              <h3>XCRYPTO -CLONE</h3>
-              <p>
-                THis website has functionality to analysis of every digital
-                currency<br />
-                Tools: React, Chakra UI, Html, CSS, JS
-              </p>
-              <a href="https://react-crypto-zeta.vercel.app" target="_blank"
-                ><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+        <h2 class="work-heading"><i class="fa-solid fa-star"></i> Featured</h2>
+        <div class="featured-list">
+          <article class="project featured">
+            <div class="project-cover">
+              <i class="fa-solid fa-building-columns"></i>
+              <span class="project-tag">Full-stack · MERN</span>
             </div>
-          </div>
-
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1624434207284-727cf0e6ea8e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            />
-            <div class="layer">
-              <h3>MI-STORE</h3>
+            <div class="project-body">
+              <h3>Banking Application</h3>
               <p>
-                Mi-Store Clone<br />
-                Tools: React, Html, CSS, JS
+                Full-stack banking platform with secure transactions, JWT
+                authentication, OTP verification, KYC, account management and
+                role-based access control.
               </p>
-              <a href="https://mistore-sc.vercel.app/" target="_blank"
-                ><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/nodejs.svg"
+                    alt=""
+                    loading="lazy"
+                  />Node.js</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/express.svg"
+                    alt=""
+                    loading="lazy"
+                  />Express</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/mongodb.svg"
+                    alt=""
+                    loading="lazy"
+                  />MongoDB</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/redis.svg"
+                    alt=""
+                    loading="lazy"
+                  />Redis</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/jsonwebtokens.svg"
+                    alt=""
+                    loading="lazy"
+                  />JWT</span
+                >
+              </div>
             </div>
-          </div>
-
-          <div class="work">
-            <img
-              src="https://cdn-bgp.bluestacks.com/BGP/us/gametiles_in.startv.hotstar.jpg"
-            />
-            <div class="layer">
-              <h3>HOTSTAR CLONE</h3>
+          </article>
+          <article class="project featured">
+            <div class="project-cover">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="project-tag">Full-stack · MERN</span>
+            </div>
+            <div class="project-body">
+              <h3>E-commerce Platform</h3>
               <p>
-                THis is a clone of Hotstar <br />
-                Tools : REACTJS | CSS | MOVIE-DB-API
+                Scalable online store with PayPal integration, a complete order
+                lifecycle, dynamic search and an admin dashboard.
               </p>
-              <a href="https://hotstar-2z2m.onrender.com/" target="_blank"
-                ><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/nodejs.svg"
+                    alt=""
+                    loading="lazy"
+                  />Node.js</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/express.svg"
+                    alt=""
+                    loading="lazy"
+                  />Express</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/mongodb.svg"
+                    alt=""
+                    loading="lazy"
+                  />MongoDB</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/cloudinary.svg"
+                    alt=""
+                    loading="lazy"
+                  />Cloudinary</span
+                >
+                <span class="tech">NodeMailer</span>
+                <span class="tech">PayPal</span>
+              </div>
             </div>
-          </div>
-
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1510&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            />
-            <div class="layer">
-              <h3>PORTFOLIO</h3>
-              <p>
-                This portfolio created using React and SCSS <br />
-                Tools : REACTJS | SASS | FRAMER-MOTION | CSS
-              </p>
-              <a href="https://vaibhav-randale.vercel.app/" target="_blank"
-                ><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="work">
-            <img
-              src="https://images.unsplash.com/photo-1580737061343-bb08ed1a4e8a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            />
-            <div class="layer">
-              <h3>WEATHER APP</h3>
-              <p>
-                This app created using weather api <br />
-                Tools: React | CSS | JS
-              </p>
-              <a href="https://weather-app-vr.vercel.app/" target="_blank"
-                ><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
+          </article>
         </div>
 
-        <a href="https://github.com/VaibhavR02" class="btn">See more</a>
+        <h2 class="work-heading">
+          <i class="fa-solid fa-code"></i> More Projects
+        </h2>
+        <div class="work-list">
+          <article class="project">
+            <div class="project-cover">
+              <img
+                src="https://images.unsplash.com/photo-1604605801370-3396f9bd9cf0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Amazon Clone preview"
+                loading="lazy"
+              />
+              <span class="project-tag">Full-stack</span>
+            </div>
+            <div class="project-body">
+              <h3>Amazon Clone</h3>
+              <p>
+                MERN-stack e-commerce website with a React front end and a
+                Node.js, Express and MongoDB back end.
+              </p>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/nodejs.svg"
+                    alt=""
+                    loading="lazy"
+                  />Node.js</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/express.svg"
+                    alt=""
+                    loading="lazy"
+                  />Express</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/mongodb.svg"
+                    alt=""
+                    loading="lazy"
+                  />MongoDB</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/html5.svg"
+                    alt=""
+                    loading="lazy"
+                  />HTML</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/css3.svg"
+                    alt=""
+                    loading="lazy"
+                  />CSS</span
+                >
+                <span class="tech">React Bootstrap</span>
+              </div>
+              <a
+                href="https://amazonnew.onrender.com"
+                class="project-link"
+                target="_blank"
+                rel="noopener"
+                >Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-cover">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1675055730251-9f3990f1f9d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGNyeXB0b3xlbnwwfHwwfHx8MA%3D%3D"
+                alt="XCrypto Clone preview"
+                loading="lazy"
+              />
+              <span class="project-tag">Frontend</span>
+            </div>
+            <div class="project-body">
+              <h3>XCrypto Clone</h3>
+              <p>Crypto dashboard to analyse every digital currency.</p>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech">Chakra UI</span>
+                <span class="tech"
+                  ><img
+                    src="images/skills/html5.svg"
+                    alt=""
+                    loading="lazy"
+                  />HTML</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/css3.svg"
+                    alt=""
+                    loading="lazy"
+                  />CSS</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/javascript.svg"
+                    alt=""
+                    loading="lazy"
+                  />JavaScript</span
+                >
+              </div>
+              <a
+                href="https://react-crypto-zeta.vercel.app"
+                class="project-link"
+                target="_blank"
+                rel="noopener"
+                >Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-cover">
+              <img
+                src="https://images.unsplash.com/photo-1624434207284-727cf0e6ea8e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Mi Store Clone preview"
+                loading="lazy"
+              />
+              <span class="project-tag">Frontend</span>
+            </div>
+            <div class="project-body">
+              <h3>Mi Store Clone</h3>
+              <p>Clone of the Mi Store website, built with React.</p>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/html5.svg"
+                    alt=""
+                    loading="lazy"
+                  />HTML</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/css3.svg"
+                    alt=""
+                    loading="lazy"
+                  />CSS</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/javascript.svg"
+                    alt=""
+                    loading="lazy"
+                  />JavaScript</span
+                >
+              </div>
+              <a
+                href="https://mistore-sc.vercel.app/"
+                class="project-link"
+                target="_blank"
+                rel="noopener"
+                >Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-cover">
+              <img
+                src="https://cdn-bgp.bluestacks.com/BGP/us/gametiles_in.startv.hotstar.jpg"
+                alt="Hotstar Clone preview"
+                loading="lazy"
+              />
+              <span class="project-tag">Frontend</span>
+            </div>
+            <div class="project-body">
+              <h3>Hotstar Clone</h3>
+              <p>Streaming-style Hotstar clone that uses the Movie DB API.</p>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/css3.svg"
+                    alt=""
+                    loading="lazy"
+                  />CSS</span
+                >
+                <span class="tech">Movie DB API</span>
+              </div>
+              <a
+                href="https://hotstar-2z2m.onrender.com/"
+                class="project-link"
+                target="_blank"
+                rel="noopener"
+                >Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-cover">
+              <img
+                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1510&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Portfolio (React) preview"
+                loading="lazy"
+              />
+              <span class="project-tag">Frontend</span>
+            </div>
+            <div class="project-body">
+              <h3>Portfolio (React)</h3>
+              <p>
+                A portfolio site built with React and SCSS, animated with Framer
+                Motion.
+              </p>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech">SASS</span>
+                <span class="tech">Framer Motion</span>
+                <span class="tech"
+                  ><img
+                    src="images/skills/css3.svg"
+                    alt=""
+                    loading="lazy"
+                  />CSS</span
+                >
+              </div>
+              <a
+                href="https://vaibhav-randale.vercel.app/"
+                class="project-link"
+                target="_blank"
+                rel="noopener"
+                >Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-cover">
+              <img
+                src="https://images.unsplash.com/photo-1580737061343-bb08ed1a4e8a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Weather App preview"
+                loading="lazy"
+              />
+              <span class="project-tag">Frontend</span>
+            </div>
+            <div class="project-body">
+              <h3>Weather App</h3>
+              <p>
+                Weather app that fetches current conditions from a weather API.
+              </p>
+              <div class="tech-list">
+                <span class="tech"
+                  ><img
+                    src="images/skills/react.svg"
+                    alt=""
+                    loading="lazy"
+                  />React</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/css3.svg"
+                    alt=""
+                    loading="lazy"
+                  />CSS</span
+                >
+                <span class="tech"
+                  ><img
+                    src="images/skills/javascript.svg"
+                    alt=""
+                    loading="lazy"
+                  />JavaScript</span
+                >
+                <span class="tech">Weather API</span>
+              </div>
+              <a
+                href="https://weather-app-vr.vercel.app/"
+                class="project-link"
+                target="_blank"
+                rel="noopener"
+                >Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+
+        <a
+          href="https://github.com/VaibhavR02"
+          class="btn"
+          target="_blank"
+          rel="noopener"
+          ><i class="fa-brands fa-github"></i> See more on GitHub</a
+        >
       </div>
     </div>
 
@@ -275,7 +1623,11 @@
                 ><i class="fa-brands fa-github"></i
               ></a>
             </div>
-            <a target="_blank" class="btn btn2" href="images/my-cv.pdf" download
+            <a
+              target="_blank"
+              class="btn btn2"
+              href="images/vaibhavrandale-resume.pdf"
+              download
               >Download CV</a
             >
           </div>
@@ -307,46 +1659,207 @@
       </div>
     </div>
     <script>
-      var tablinks = document.getElementsByClassName('tab-links');
-      var tabcontents = document.getElementsByClassName('tab-contents');
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
 
       function opentab(tabname) {
         for (tablink of tablinks) {
-          tablink.classList.remove('active-link');
+          tablink.classList.remove("active-link");
         }
         for (tabcontent of tabcontents) {
-          tabcontent.classList.remove('active-tab');
+          tabcontent.classList.remove("active-tab");
         }
-        event.currentTarget.classList.add('active-link');
-        document.getElementById(tabname).classList.add('active-tab');
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
       }
     </script>
     <script>
-      var sidemeu = document.getElementById('sidemenu');
+      // Tech Stack: staggered reveal on scroll + calm mode for reduced motion
+      (function () {
+        var section = document.getElementById("skills-showcase");
+        var arch = section.querySelector(".arch");
+        var reduce = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        if (reduce) {
+          if (arch.pauseAnimations) arch.pauseAnimations();
+          section.classList.add("no-motion");
+          return;
+        }
+        if (!("IntersectionObserver" in window)) return;
+
+        section.classList.add("js-anim");
+        var targets = section.querySelectorAll(
+          ".sub-title, .skills-intro, .arch-wrap, .skill-group",
+        );
+        section.querySelectorAll(".skill-group").forEach(function (group) {
+          group.querySelectorAll(".skill").forEach(function (chip, i) {
+            chip.style.setProperty("--i", i);
+          });
+        });
+        targets.forEach(function (el, i) {
+          el.classList.add("reveal");
+          if (el.classList.contains("skill-group")) {
+            el.style.setProperty("--d", (i % 3) * 0.12 + "s");
+          }
+        });
+
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        targets.forEach(function (el) {
+          io.observe(el);
+        });
+      })();
+    </script>
+    <script>
+      // Top Work: reveal cards on scroll
+      (function () {
+        if (
+          !("IntersectionObserver" in window) ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+          return;
+        var els = document.querySelectorAll(
+          "#portfolio .sub-title, .work-intro, .work-heading, .project, #services .sub-title, .interest-intro, .interest",
+        );
+        els.forEach(function (el, i) {
+          el.classList.add("reveal");
+          if (
+            el.classList.contains("project") ||
+            el.classList.contains("interest")
+          ) {
+            el.style.setProperty("--d", (i % 3) * 0.12 + "s");
+          }
+        });
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+        els.forEach(function (el) {
+          io.observe(el);
+        });
+      })();
+    </script>
+    <script>
+      // About: count-up stats when they scroll into view
+      (function () {
+        var nums = document.querySelectorAll("[data-count]");
+        if (
+          !("IntersectionObserver" in window) ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+          return;
+
+        function run(el) {
+          var end = parseFloat(el.dataset.count);
+          var dec = parseInt(el.dataset.decimals || "0", 10);
+          var start = null;
+          var dur = 1400;
+          function step(ts) {
+            if (start === null) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = (end * eased).toFixed(dec);
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                run(e.target);
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.6 },
+        );
+        nums.forEach(function (n) {
+          n.textContent = (0).toFixed(parseInt(n.dataset.decimals || "0", 10));
+          io.observe(n);
+        });
+      })();
+    </script>
+    <script>
+      // Nav: shadow after scrolling + highlight the section in view
+      (function () {
+        var nav = document.querySelector("nav");
+        function onScroll() {
+          nav.classList.toggle("scrolled", window.scrollY > 10);
+        }
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+
+        if (!("IntersectionObserver" in window)) return;
+        var links = document.querySelectorAll("#sidemenu a[href^='#']");
+        var map = {};
+        links.forEach(function (a) {
+          map[a.getAttribute("href").slice(1)] = a;
+        });
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              links.forEach(function (a) {
+                a.classList.remove("active");
+              });
+              var a = map[e.target.id];
+              if (a) a.classList.add("active");
+            });
+          },
+          { rootMargin: "-45% 0px -50% 0px" },
+        );
+        Object.keys(map).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) io.observe(el);
+        });
+      })();
+    </script>
+    <script>
+      var sidemeu = document.getElementById("sidemenu");
       function openmenu() {
-        sidemeu.style.right = '0';
+        sidemeu.style.right = "0";
       }
       function closemenu() {
-        sidemeu.style.right = '-200px';
+        sidemeu.style.right = "-200px";
       }
     </script>
     <script>
       const scriptURL =
-        'https://script.google.com/macros/s/AKfycbzXTzPPb0m7_MKw40e9d1tmeHKdV6Lx0UAfRapHwlQI2lqryEOvIEOZ1sYWbdA-8wmI6g/exec';
-      const form = document.forms['submit-to-google-sheet'];
-      const msg = document.getElementById('msg');
+        "https://script.google.com/macros/s/AKfycbzXTzPPb0m7_MKw40e9d1tmeHKdV6Lx0UAfRapHwlQI2lqryEOvIEOZ1sYWbdA-8wmI6g/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
-      form.addEventListener('submit', (e) => {
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
-            msg.innerHTML = 'Thanks for your valuable feedback..!';
+            msg.innerHTML = "Thanks for your valuable feedback..!";
             setTimeout(function () {
-              msg.innerHTML = '';
+              msg.innerHTML = "";
             }, 1000);
             form.reset();
           })
-          .catch((error) => console.error('Error!', error.message));
+          .catch((error) => console.error("Error!", error.message));
       });
     </script>
   </body>
