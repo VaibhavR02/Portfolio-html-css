@@ -125,7 +125,7 @@ nav ul li a:hover::after {
   margin: auto;
 }
 
-.meImgae > img {
+.meImgae img {
   width: 100%;
   max-width: 460px;
   aspect-ratio: 1 / 1;
@@ -1179,7 +1179,7 @@ nav .fas {
     display: none;
   }
 
-  .meImgae > img {
+  .meImgae img {
     max-width: 300px;
   }
 }
@@ -1435,7 +1435,7 @@ form textarea:focus {
   margin: 0 auto;
 }
 
-.meImgae > img {
+.meImgae img {
   max-width: 500px;
 }
 
@@ -1449,7 +1449,7 @@ form textarea:focus {
   .meImgae {
     margin: 20px auto 0;
   }
-  .meImgae > img {
+  .meImgae img {
     max-width: 320px;
   }
 }
@@ -1494,7 +1494,7 @@ form textarea:focus {
   }
 }
 
-.meImgae > img {
+.meImgae img {
   display: block;
 }
 
@@ -1556,7 +1556,7 @@ form textarea:focus {
   justify-content: center;
 }
 
-#header .meImgae > img {
+#header .meImgae img {
   width: auto;
   max-width: 100%;
   height: min(calc(100vh - 130px), 760px);
@@ -1575,7 +1575,7 @@ form textarea:focus {
     width: 100%;
     margin: 0 auto;
   }
-  #header .meImgae > img {
+  #header .meImgae img {
     width: 100%;
     height: auto;
     min-height: 0;
@@ -1619,7 +1619,7 @@ form textarea:focus {
   margin: 0;
 }
 
-#header .meImgae > img {
+#header .meImgae img {
   width: 100%;
   max-width: none;
   height: min(78vh, 640px);
@@ -1635,7 +1635,7 @@ form textarea:focus {
   #header .hero {
     padding: 0;
   }
-  #header .meImgae > img {
+  #header .meImgae img {
     height: auto;
     min-height: 0;
     aspect-ratio: 1312 / 1199;
@@ -1678,7 +1678,7 @@ form textarea:focus {
   position: relative;
 }
 
-#header .meImgae > img {
+#header .meImgae img {
   height: 100vh;
   height: 100svh;
   min-height: 520px;
@@ -1718,7 +1718,7 @@ nav:not(.scrolled) > .fa-bars {
 }
 
 @media only screen and (max-width: 700px) {
-  #header .meImgae > img {
+  #header .meImgae img {
     height: auto;
     min-height: 0;
   }
@@ -1738,7 +1738,7 @@ nav:not(.scrolled) .name {
 
 /* phones: show the full 16:9 hero image, no cropping */
 @media only screen and (max-width: 700px) {
-  #header .meImgae > img {
+  #header .meImgae img {
     aspect-ratio: 16 / 9;
     height: auto;
   }
@@ -1786,4 +1786,309 @@ nav:not(.scrolled) .name {
 .about-focus .tech i {
   color: var(--accent);
   font-size: 13px;
+}
+
+/* =====================================================================
+   Responsive hardening
+   ===================================================================== */
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: clip;
+}
+
+/* grids never force a column wider than the screen */
+.skills-grid,
+.services-list,
+.featured-list,
+.work-list {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.featured-list {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+
+.contact-left p,
+.contact-left a,
+.project-body h3,
+.project-body p,
+.interest h2,
+.interest p {
+  overflow-wrap: anywhere;
+}
+
+/* tablets */
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  nav {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .sub-title {
+    font-size: 36px;
+  }
+  .skill-group.wide {
+    grid-column: auto;
+  }
+}
+
+/* phones */
+@media only screen and (max-width: 700px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .sub-title {
+    font-size: 30px;
+  }
+  .work-heading {
+    font-size: 20px;
+    margin: 36px 0 20px;
+  }
+  .skill-group,
+  .interest {
+    padding: 22px 18px;
+  }
+  .project-body {
+    padding: 18px;
+  }
+  .contact-left p {
+    font-size: 16px;
+  }
+  .social-icons a {
+    font-size: 26px;
+    margin-right: 12px;
+  }
+  form input,
+  form textarea {
+    font-size: 16px; /* also stops iOS zoom-on-focus */
+  }
+  .tab-titles {
+    flex-wrap: wrap;
+    gap: 8px 0;
+  }
+  .about-col-2 p.about-lead {
+    font-size: 17px;
+  }
+  .about-col-2 p.about-sub {
+    font-size: 15px;
+  }
+  .btn {
+    margin: 36px auto;
+  }
+}
+
+/* very small phones */
+@media only screen and (max-width: 360px) {
+  .sub-title {
+    font-size: 26px;
+  }
+  .skill {
+    font-size: 13px;
+    padding-right: 10px;
+  }
+  .about-focus .tech {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+  .name {
+    font-size: 24px;
+  }
+}
+
+/* ---- hamburger menu up to 900px so the nav never wraps ---- */
+@media only screen and (max-width: 900px) {
+  nav .fas {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  nav ul {
+    background: var(--accent);
+    position: fixed;
+    top: 0;
+    right: -220px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: #fff;
+  }
+  nav ul li a,
+  nav:not(.scrolled) ul li a {
+    color: #fff;
+    text-shadow: none;
+  }
+  nav ul li a::after,
+  nav:not(.scrolled) ul li a::after {
+    background: #fff;
+  }
+}
+
+/* ---- hero on tablets / portrait screens: don't crop down to a thin strip ---- */
+@media only screen and (max-width: 900px), (max-aspect-ratio: 1/1) {
+  #header .meImgae img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #header .meImgae img {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ---- wide monitors: cap the content width, keep it centred ---- */
+.container {
+  padding-left: max(10%, calc((100% - 1240px) / 2));
+  padding-right: max(10%, calc((100% - 1240px) / 2));
+}
+
+nav {
+  padding-left: max(10%, calc((100% - 1240px) / 2));
+  padding-right: max(10%, calc((100% - 1240px) / 2));
+}
+
+/* re-assert the tighter gutters on smaller screens (must come after the rule above) */
+@media only screen and (max-width: 1024px) {
+  .container,
+  nav {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* hero container stays full-bleed */
+#header .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ---- comfortable touch targets ---- */
+@media only screen and (max-width: 900px) {
+  nav > .fa-bars {
+    padding: 10px;
+    margin-right: -10px;
+  }
+  nav ul .fas {
+    top: 14px;
+    left: 14px;
+    padding: 11px;
+  }
+  nav ul li a {
+    display: inline-block;
+    padding: 8px 0;
+  }
+  nav ul li a::after {
+    bottom: 2px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .tab-links {
+    padding: 8px 0;
+  }
+  .tab-links::after {
+    bottom: 0;
+  }
+  .skills-link {
+    display: inline-block;
+    padding: 8px 0;
+  }
+}
+
+.arch-hint {
+  display: none;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.arch-hint i {
+  margin-left: 6px;
+  color: var(--accent);
+}
+
+@media only screen and (max-width: 900px) {
+  .arch-hint {
+    display: block;
+  }
+}
+
+/* slide-in menu on short (landscape) screens */
+@media only screen and (max-width: 900px) {
+  nav ul {
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 560px) {
+  nav ul {
+    padding-top: 56px;
+  }
+  nav ul li {
+    margin: 6px 25px;
+  }
+}
+
+/* ---- phones: full-screen hero using the 9:16 portrait image ---- */
+@media only screen and (max-width: 700px) {
+  #header .meImgae picture {
+    display: block;
+    width: 100%;
+  }
+  #header .meImgae img {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 480px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 42%;
+  }
+  #header .meImgae::before {
+    height: 130px;
+  }
+}
+
+/* the <picture> wrapper must be a full-width block at every size */
+#header .meImgae picture {
+  display: block;
+  width: 100%;
+}
+
+/* two-way links: solid glowing line (no one-directional dash animation) */
+.arch-flow use.bi {
+  stroke-dasharray: none;
+  animation: none;
+  opacity: 0.35;
 }
